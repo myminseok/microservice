@@ -1,6 +1,29 @@
 Microservice Sample
 ==============
 
+
+1) brew install rabbitmq
+   /usr/local/sbin/rabbitmq-server
+
+2) run eureka-server (microservice-demo-eureka-server)
+    http://localhost:8761/
+
+3) run turbine-stream server (microservice-demo-turbine-server)
+    http://localhost:9999/
+
+4) run apps: eureka-client
+    microservice-demo-customer
+    microservice-demo-order
+
+5) run hystrix-dashboard
+    http://localhost:10000/hystrix
+    hystrix-stream: http://localhost:9999/
+
+
+
+
+
+
 [German / Deutsch](LIESMICH.md)
 
 This is a sample for my

@@ -1,10 +1,12 @@
 server:
-  port: 8989
+  port: 9999 
+management:
+  port: 9998
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka:8761/eureka/    
+      defaultZone: http://localhost:8761/eureka/    
   server:
     waitTimeInMsWhenSyncEmpty: 0
   instance:
@@ -13,7 +15,20 @@ eureka:
     
 turbine:
   aggregator:
-    clusterConfig: ORDER
-  appConfig: order
+    clusterConfig: ORDER,CUSTOMER
+  appConfig: order,customer
+  clusterNameExpression: metadata['default']
+  amqp:
+    port: 9997
 
-  
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+
+
+#logging:
+#  level:
+#    com.netflix.turbine: 'TRACE'
+#
+#
