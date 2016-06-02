@@ -1,6 +1,7 @@
 Microservice Sample
 ==============
 
+this demo runs on localhost
 
 1) brew install rabbitmq
    /usr/local/sbin/rabbitmq-server
